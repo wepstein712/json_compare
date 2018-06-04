@@ -1,0 +1,1118 @@
+{
+    "id": "https://dev-479162.okta.com/meta/schemas/user/default",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "name": "user",
+    "title": "User",
+    "description": "Okta user profile template with default permission settings",
+    "lastUpdated": "2018-05-15T08:23:43.000Z",
+    "created": "2017-07-05T15:03:40.000Z",
+    "definitions": {
+        "custom": {
+            "id": "#custom",
+            "type": "object",
+            "properties": {
+                "customerId": {
+                    "title": "Customer ID",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "guid": {
+                    "title": "guid",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "userState": {
+                    "title": "UserState",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "homePhone": {
+                    "title": "Home Phone",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imNeedMFA": {
+                    "title": "Secondary  Authenitication",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imNeedMFAComment": {
+                    "title": "Secondary  Authenitication Comment",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "tempCode": {
+                    "title": "Temp Registration",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "userPassword": {
+                    "title": "Password",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imPasswordData": {
+                    "title": "Password Data/password history",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imPasswordQandA": {
+                    "title": "QandA",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 500,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imBPOrgID": {
+                    "title": "OrganisationID",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imAdminRoles": {
+                    "title": "Admin Roles",
+                    "type": "array",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "items": {
+                        "type": "string"
+                    },
+                    "union": "DISABLE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imAccessRoles": {
+                    "title": "Roles",
+                    "type": "array",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "items": {
+                        "type": "string"
+                    },
+                    "union": "DISABLE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imCreationDate": {
+                    "title": "Creation Date",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imCreatedBy": {
+                    "title": "Created By",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imLastModified": {
+                    "title": "Last Modified Date",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imLastLoginDate": {
+                    "title": "Last Login Date",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imActivationDate": {
+                    "title": "Activation Date",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "imExpirationDate": {
+                    "title": "Expiration Date",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "modifyby": {
+                    "title": "modifyby",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "isregistrationcomplete": {
+                    "title": "IsRegistrationComplete",
+                    "type": "boolean",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecQA2": {
+                    "title": "Security Question 2",
+                    "description": "Security Question 2",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecQA3": {
+                    "title": "Security Question 3",
+                    "description": "Security Question 3",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecAns2": {
+                    "title": "Security Answer 2",
+                    "description": "Security Answer 2",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 150,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecAns3": {
+                    "title": "Security Answer 3",
+                    "description": "Security Answer 3",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 150,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "Enrollid": {
+                    "title": "EnrollmentId",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 50,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "lastForgotIdUpdate": {
+                    "title": "lastForgotIdUpdate",
+                    "description": "last time when user retrieves the user Id via Forgot user ID option",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 50,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "MFAStatus": {
+                    "title": "MFAStatus",
+                    "description": "Status of the user who enabled the MFA for everytime login",
+                    "type": "boolean",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecQA1": {
+                    "title": "Security Question 1",
+                    "description": "Security Question 1",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "SecAns1": {
+                    "title": "Security Answer 1",
+                    "description": "Security Answer 1",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 150,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "MFAProfile": {
+                    "title": "MFAProfile",
+                    "description": "MFAProfile",
+                    "type": "boolean",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "logadminupdate": {
+                    "title": "logadminupdate",
+                    "description": "Log details of recent updated by admin",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 500,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "MobileDeviceInfo": {
+                    "title": "MobileDeviceInfo",
+                    "description": "Mobile Device Info",
+                    "type": "array",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "items": {
+                        "type": "string"
+                    },
+                    "union": "DISABLE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "subUserLevel1": {
+                    "title": "SubUserLevel1",
+                    "description": "Level1 User of CheckFreeSB",
+                    "type": "array",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "items": {
+                        "type": "string"
+                    },
+                    "union": "DISABLE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "subUserOtherLevels": {
+                    "title": "SubUserOtherLevels",
+                    "description": "Level 2 , Level3 Users of CheckFree SB",
+                    "type": "array",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "items": {
+                        "type": "string"
+                    },
+                    "union": "DISABLE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                }
+            },
+            "required": []
+        },
+        "base": {
+            "id": "#base",
+            "type": "object",
+            "properties": {
+                "login": {
+                    "title": "Username",
+                    "type": "string",
+                    "required": true,
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 5,
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "firstName": {
+                    "title": "First name",
+                    "type": "string",
+                    "required": true,
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_WRITE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "lastName": {
+                    "title": "Last name",
+                    "type": "string",
+                    "required": true,
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_WRITE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "middleName": {
+                    "title": "Middle name",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "honorificPrefix": {
+                    "title": "Honorific prefix",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "honorificSuffix": {
+                    "title": "Honorific suffix",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "email": {
+                    "title": "Primary email",
+                    "type": "string",
+                    "required": true,
+                    "format": "email",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_WRITE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "title": {
+                    "title": "Title",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "displayName": {
+                    "title": "Display name",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "nickName": {
+                    "title": "Nickname",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "profileUrl": {
+                    "title": "Profile Url",
+                    "type": "string",
+                    "format": "uri",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "secondEmail": {
+                    "title": "Secondary email",
+                    "type": "string",
+                    "format": "email",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_WRITE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "mobilePhone": {
+                    "title": "Mobile phone",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_WRITE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "primaryPhone": {
+                    "title": "Primary phone",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "maxLength": 100,
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "streetAddress": {
+                    "title": "Street address",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "city": {
+                    "title": "City",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "state": {
+                    "title": "State",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "zipCode": {
+                    "title": "Zip code",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "countryCode": {
+                    "title": "Country code",
+                    "type": "string",
+                    "format": "country-code",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "postalAddress": {
+                    "title": "Postal Address",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "HIDE"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "preferredLanguage": {
+                    "title": "Preferred language",
+                    "type": "string",
+                    "format": "language-code",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "locale": {
+                    "title": "Locale",
+                    "type": "string",
+                    "format": "locale",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "timezone": {
+                    "title": "Time zone",
+                    "type": "string",
+                    "format": "timezone",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "userType": {
+                    "title": "User type",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "employeeNumber": {
+                    "title": "Employee number",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "costCenter": {
+                    "title": "Cost center",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "organization": {
+                    "title": "Organization",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "division": {
+                    "title": "Division",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "department": {
+                    "title": "Department",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "managerId": {
+                    "title": "ManagerId",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                },
+                "manager": {
+                    "title": "Manager",
+                    "type": "string",
+                    "mutability": "READ_WRITE",
+                    "scope": "NONE",
+                    "permissions": [
+                        {
+                            "principal": "SELF",
+                            "action": "READ_ONLY"
+                        }
+                    ],
+                    "master": {
+                        "type": "PROFILE_MASTER"
+                    }
+                }
+            },
+            "required": [
+                "login",
+                "firstName",
+                "lastName",
+                "email"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "profile": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/custom"
+                },
+                {
+                    "$ref": "#/definitions/base"
+                }
+            ]
+        }
+    }
+}

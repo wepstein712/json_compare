@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/wepstein/Desktop/Projects/okta-tool/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wepstein/Desktop/Projects/okta-tool/google-collections-1.0-rc2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wepstein/Desktop/Projects/okta-tool/guava.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wepstein/Desktop/Projects/okta-tool/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wepstein/Desktop/Projects/okta-tool/okhttp-3.10.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
