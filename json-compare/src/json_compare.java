@@ -102,15 +102,17 @@ public class json_compare {
 						if (left.get(entry.getKey()).toString().equals(right.get(entry.getKey()).toString())) {
 							return acc;
 						} else if ((left.get(entry.getKey()).isJsonArray() && right.get(entry.getKey()).isJsonArray()) || (left.get(entry.getKey()).isJsonObject() && right.get(entry.getKey()).isJsonObject())) {
-							acc += this.mapCompare(left.get(entry.getKey()), right.get(entry.getKey()), root + ">" + entry.getKey());
-							
+							acc += this.mapCompare((JsonObject)left.get(entry.getKey()), (JsonObject)right.get(entry.getKey()), root + ">" + entry.getKey());
+						} else {
+							return acc + "\n" + root + ">" + entry.getKey() + ">" + left.get(entry.getKey()) 
+										+ "\n"  + root + ">" + entry.getKey() + ">" + right.get(entry.getKey()); 
 						}
+					} else {
+						return acc + "\n" + root + ">" + entry.getKey() + "exists only in the left JSON";
 					}
 				}
 			}
-			return "";
-			
-			
+			return acc;
 			
 	}
 	
