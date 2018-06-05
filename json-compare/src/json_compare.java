@@ -101,7 +101,8 @@ public class json_compare {
 					if (right.has(entry.getKey())) {
 						if (left.get(entry.getKey()).toString().equals(right.get(entry.getKey()).toString())) {
 							return acc;
-						} else if (left.get(entry.getKey()).isJsonArray() && right.get(entry.getKey()).isJsonArray()) {
+						} else if ((left.get(entry.getKey()).isJsonArray() && right.get(entry.getKey()).isJsonArray()) || (left.get(entry.getKey()).isJsonObject() && right.get(entry.getKey()).isJsonObject())) {
+							acc += this.mapCompare(left.get(entry.getKey()), right.get(entry.getKey()), root + ">" + entry.getKey());
 							
 						}
 					}
