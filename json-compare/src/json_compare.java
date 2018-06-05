@@ -36,8 +36,8 @@ public class json_compare {
 		  JsonElement root1 = this.getJson(json1);
 		  JsonObject jOne = root1.getAsJsonObject();
 //		  Map<String, String[]> secondMap = g.fromJson(json2, mapType);
-		  JsonElement root2 = this.getJson(json1);
-		  JsonObject jTwo = root1.getAsJsonObject();
+		  JsonElement root2 = this.getJson(json2);
+		  JsonObject jTwo = root2.getAsJsonObject();
 		  
 
 		  
@@ -71,21 +71,46 @@ public class json_compare {
 		return new JsonParser().parse(jsonString);	
 	}
 	
+//	private String mapCompare (JsonObject left, JsonObject right, String root) {
+//		String diffLog = "";
+//		if (left.toString().equals(right.toString())) {
+//			return diffLog;
+//		} else {
+//			Set<Map.Entry<String, JsonElement>> entriesLeft = left.entrySet();
+//			Set<Map.Entry<String, JsonElement>> entriesRight = right.entrySet();
+//			for (Map.Entry<String, JsonElement> entry: entriesLeft) {
+//			   if (right.has(entry.getKey())) {
+//				   String s = entry.toString();
+//				   String t = right.).toString();
+//				   if (entry.toString().equals(right.get(entry.getKey()).toString())) {
+//					  
+//					   System.out.println();
+//				   }
+//				   diffLog+= this.mapCompare(left.getAsJsonObject(entry.getKey()),  right.getAsJsonObject(entry.getKey()),  root + ">" + entry.getKey());
+//			   } else {
+//				   System.out.println("ASD");
+//			   }
+//			}
+//			
 	private String mapCompare (JsonObject left, JsonObject right, String root) {
-		String diffLog = "";
-		Set<Map.Entry<String, JsonElement>> entriesLeft = left.entrySet();
-		Set<Map.Entry<String, JsonElement>> entriesRight = right.entrySet();
-		for (Map.Entry<String, JsonElement> entry: entriesLeft) {
-		   if (right.has(entry.getKey())) {
-			   JsonElement s = left.get(entry.getKey());
-			   System.out.println("asd");
-		   } else {
-			   System.out.println("ASD");
-		   }
-		}
-		
-		
-		return diffLog;
+			String acc = "";
+			if (left.toString().equals(right.toString())) { return acc; }
+			else {
+				Set<Map.Entry<String, JsonElement>> entriesLeft = left.entrySet();
+				for (Map.Entry<String, JsonElement> entry: entriesLeft) {
+					if (right.has(entry.getKey())) {
+						if (left.get(entry.getKey()).toString().equals(right.get(entry.getKey()).toString())) {
+							return acc;
+						} else if (left.get(entry.getKey()).isJsonArray() && right.get(entry.getKey()).isJsonArray()) {
+							
+						}
+					}
+				}
+			}
+			return "";
+			
+			
+			
 	}
 	
 }
